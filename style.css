@@ -14,6 +14,13 @@ html{
     border: none;
     color: #fff;
 }
+.btn-close{
+    position: absolute;
+    right: 19px;
+    top: 5px;
+    z-index: 1000;
+}
+
 .box-menu{
     height: 100vh;
     position: absolute;
@@ -27,7 +34,7 @@ html{
 .box-menu>a>img{
     width: 500px;
     height: 100vh;
-    animation: desl 1s linear;
+    animation: desl 0.6s linear;
     
 }
 @keyframes desl{
@@ -37,42 +44,54 @@ html{
     100%{width: 100%;}
 }
 
+.texto-m{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.884);
+    animation:  desltext 0.6s linear;
 
-.box-menu>a>.gradiente{
-    z-index: 2000;
-    background: linear-gradient(rgb(17, 17, 17),rgba(226, 224, 223, 0.945)) ;
-    width: 500px;
-    height: 100hv;
-    animation: grad 1s linear;
-    background: black;
 }
-
-@keyframes grad {
-    0%{width:0%;height: 0%; opacity: 0.5; background: black;}
-    50%{width:50%; height: 50%; opacity: 0.6; background: black;}
-    75%{width:75%; height: 75%; opacity: 0.7;background: black;}
-    100%{width:100%; height: 100%; opacity: 0.8;background: black;}
+@keyframes desltext{
+    0%{width: 0%;}
+    50%{width: 50%;}
+    75%{width: 75%;}
+    100%{width: 100%;}
 }
+.texto-m>li{
+    text-align: center;
+    list-style: none;
+    margin: 40px;
+    font-size: 20px;
+}
+.texto-m>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+.texto-m>li>a:focus{
+    color: rgb(53, 233, 173);
+}
+.texto-m>.rrss{
+    margin-top: 80px;
+    margin-left: 13%;
 
-
-
+}
 .barra-up{
     top: 0;
     z-index: -1000;
-    background-color: red;
     position: absolute;
     width: 100%;
     height: 500px;
-    background-image: url(/img/7.png);
-    background-size: 135%;
-    animation: mover3 10s infinite linear alternate;
+    background-image: url(/img/6.png);
+    background-size: 132%;
+    animation: mover3 22s infinite linear alternate;
     
 }
 @keyframes mover3{
-    from{
-        background-position: left top ;
-    }
-    to{
+    0%{background-position: left top ;}
+    50%{background-image: url(/img/3.png);}
+    75%{background-image: url(/img/4.jpeg);}
+    100%{
         background-position: right bottom;
     }
 }
@@ -86,10 +105,39 @@ html{
 .gradient{
     position: relative;
     z-index: 2000;
-    background: linear-gradient(rgb(17, 17, 17),rgba(226, 224, 223, 0.945)) ;
+    background: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.575)) ;
     opacity: 0.5;
     height: 500px;
     width: 100%;
+}
+.titulo-portada,h1,p{
+   text-align: center;
+   position: relative;
+   top: 80px;
+}
+.titulo-portada>h1{
+    font-size: 60px;
+    font-family: flanklin;
+    color: rgba(255, 255, 255, 0.89);
+    z-index: 1000;
+    height: 80px;
+}
+.titulo-portada>p{
+    font-size: 22px;
+    margin-top: 65px;
+    z-index: 1000;
+    color: #fff;
+    font-style: italic;
+    font-family: system-ui;
+}
+
+.section1{
+    margin-top: 320px;
+}
+.section1>.row>p{
+    font-size: 18px;
+    font-family: monospace;
+
 }
 
 .container>h1{
@@ -103,33 +151,30 @@ html{
 }
 .container>.card-text{
     margin-top: 5px;
-    background: rgba(238, 234, 234, 0.541);
     width: 100%;
-    padding: 20px;
-}
-.card-text>p{
-    color: #fff;
-    height: 450px;
     padding: 30px;
-    border-radius: 20px;
-    width: 450px;
-    margin: 20px;
-    background: linear-gradient(rgb(127, 177, 173),rgb(245, 213, 213));
+}
 
+.container,.card-text{
+    width: 100%;
+    background: black;
 }
 .card-text>p>img{
-    width: 70%;
-    margin: 10px;
+    width: 170px;
+    height: 150px;
+    margin-left: 58px;
+    margin-top: 20px;
     padding: 5px;
     border-radius: 50%;
-    border: 4px solid rgba(11, 11, 44, 0.671);
+    border: 6px solid rgba(12, 12, 12, 0.603);
 }
+
 .container>.row>img{
     width: 320px;
     height: 300px;
 }
 .container>.section1{
-    margin-top: 550px;
+    margin-top:  500px;
     background:linear-gradient(black,rgb(56, 54, 54));
     padding: 30px;
     color: white;
@@ -137,27 +182,56 @@ html{
 .container>.section1>h1{
     margin: 20px;
 }
-.title-card>h1{
-    width:800px; 
-    height: 100px; 
-    text-align: center; 
-    margin-top: 80px;
+.title-card{
+    background: rgb(0, 0, 0);
+    padding: 10px;
 }
-.title-card>h1{ 
+
+.title-card>img{
+    background-size: 300%;
+    width: 400px;
+    height: 300px;
+}
+
+#info{
     text-align: center;
-    width:100%; 
-    margin-top: 100px;
-    background: linear-gradient(black,rgb(46, 45, 45));
-    color: #fff;
     
 }
-.title-card>img{
-    width: 400px;
-    height: 500px;
+#info>.container>.row>h1{
+    padding: 50px;
+    margin: 50px;
+    background: rgb(22, 22, 22);
+    color: #fff;
+    width: 100%;
+}
+#info>p{
+    padding: 20px;
+}
+#info>.container>.row>.text{
+    font-size: 18px;
+    font-family: monospace;
+    height: 300px;
+}
+
+.gap{
+    background: black;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
 }
 
 footer{
     width: 100%;
-    height: 400px;
+    height: 450px;
     background: linear-gradient(black,rgb(61, 58, 58));
+    margin-top: 2px;
+    padding: 5px;
+}
+
+.footer{
+    margin-top: 50px;
+    width: 300px;
+    height: 420x;
+    background: rgba(207, 205, 205, 0.041);
+    color: #fff;
 }
