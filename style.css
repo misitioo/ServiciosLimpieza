@@ -6,6 +6,7 @@ body{
 }
 html{
     scroll-behavior: smooth;
+
 }
 #menuAbrir{
     left: 0;
@@ -39,7 +40,7 @@ html{
 }
 
 .box-menu>a>img{
-    width: 450px;
+    width: 400px;
     height: 100vh;
     animation: desl 0.6s linear;
     
@@ -53,7 +54,7 @@ html{
 
 .texto-m{
     position: absolute;
-    width: 100%;
+    width:400px ;
     height: 100vh;
     background: rgba(0, 0, 0, 0.884);
     animation:  desltext 0.6s linear;
@@ -165,28 +166,27 @@ html{
 
 
 .container>.row>img{
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
 }
 .container-fluid>.section1{
     margin-top:  500px;
     background:linear-gradient(black,rgb(56, 54, 54));
-    padding: 10px;
+    padding: 5px;
     color: white;
 }
 .container>.section1>h1{
-    margin: 20px;
+    margin: 10px;
 }
 .title-card{
     background: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 5px;
     width: 100%;
 }
 
 .title-card>img{
-    background-size: 200%;
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
 }
 
 #info{
@@ -195,14 +195,13 @@ html{
     background: linear-gradient(rgba(56, 56, 56, 0.973),rgba(3, 11, 54, 0.377));
 }
 #info>.container>.row>h1{
-    padding: 30px 0px;
-    margin: 50px;
+    padding: 10px 0px;
+    margin: 20px;
     background: rgb(22, 22, 22);
     color: #fff;
-    width: 100%;
 }
 #info>p{
-    padding: 20px;
+    padding: 5px;
 }
 #info>.container>.row>.text{
     font-size: 16px;
@@ -212,7 +211,6 @@ html{
 
 .gap{
     background: black;
-    width: 100%;
     height: 100px;
 }
 .gap>h1{
@@ -220,7 +218,6 @@ html{
 }
 
 footer{
-    width: 100%;
     height: 450px;
     background: linear-gradient(black,rgb(61, 58, 58));
     padding: 5px;
