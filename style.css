@@ -9,6 +9,7 @@ html{
 
 }
 #menuAbrir{
+    z-index: 1500;
     left: 0;
     top: 0;
     position: absolute;
@@ -21,16 +22,9 @@ html{
     right: 19px;
     top: 5px;
     z-index: 1000;
-    animation: btn 0.7s linear;
-}
-@keyframes btn{
-    0%{width: 100%; transform: skew(0deg);}
-    50%{width: 75%; transform: skew(180deg);}
-    75%{width: 50%; transform: skew(270deg);}
-    100%{width: 0%; transform: skew(360deg);}
 }
 .box-menu{
-    height: 100vh;
+    height: 600px;
     position: absolute;
     top: 30px;
     z-index: 4000;
@@ -39,33 +33,28 @@ html{
     
 }
 
+
 .box-menu>a>img{
-    width: 400px;
+    width: 300px;
     height: 100vh;
     animation: desl 0.6s linear;
     
 }
 @keyframes desl{
     0%{width: 0%;}
-    50%{width: 50%;}
-    75%{width: 75%;}
-    100%{width: 100%;}
+    10%{width: 200px;}
+    20%{width: 250px;}
+    30%{width: 300px;}
 }
 
 .texto-m{
     position: absolute;
-    width:400px ;
+    width:300px ;
     height: 100vh;
     background: rgba(0, 0, 0, 0.884);
-    animation:  desltext 0.6s linear;
 
 }
-@keyframes desltext{
-    0%{width: 0%;}
-    50%{width: 50%;}
-    75%{width: 75%;}
-    100%{width: 100%;}
-}
+
 .texto-m>li{
     text-align: center;
     list-style: none;
@@ -80,23 +69,22 @@ html{
     color: rgb(53, 233, 173);
 }
 .texto-m>.rrss{
-    margin-top: 80px;
-    margin-left: 13%;
+    margin-top: 50px;
 
 }
 .barra-up{
     top: 0;
-    z-index: -1000;
+    z-index: 1000;
     position: absolute;
     width: 100%;
-    height: 500px;
     background-image: url(./img/6.png);
-    background-size: 132%;
-    animation: mover3 22s infinite linear alternate;
+    height: 500px;
+    background-size: 150%;
+    animation: mover3 15s infinite linear alternate;
     
 }
 @keyframes mover3{
-    0%{background-position: left top ;}
+    0%{background-position: left top ; background-image: url(./img/6.png);}
     50%{background-image: url(./img/3.png);}
     75%{background-image: url(./img/4.jpeg);}
     100%{
@@ -108,7 +96,7 @@ html{
     font-size: 18px;
     text-decoration: none;
     color: rgb(240, 226, 226);
-    z-index: 3000;
+    z-index: 6000;
 }
 .gradient{
     position: relative;
@@ -122,12 +110,13 @@ html{
    text-align: center;
    position: relative;
    top: 80px;
+   z-index: 1500;
 }
 .titulo-portada>h1{
     font-size: 60px;
     font-family: flanklin;
     color: rgba(255, 255, 255, 0.89);
-    z-index: 1000;
+    z-index: 1500;
     height: 80px;
 }
 .titulo-portada>p{
@@ -138,95 +127,50 @@ html{
     font-style: italic;
     font-family: system-ui;
 }
-
-.section1{
-    margin-top: 320px;
+.section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
-.section1>.row>p{
-    font-size: 18px;
-    font-family: monospace;
-
-}
-
-.container>h1{
-    margin-top: 50px;
-    margin-left: 60px;
-    color:#fff;
-    width: 350px;
-    padding: 20px;
-    font-family: Verdana;
-    font-size:40px;
-}
-
-
-.container,.card-text{
-    width: 100%;
-    background: black;
-}
-
-
-.container>.row>img{
-    width: 300px;
-    height: 250px;
-}
-.container-fluid>.section1{
-    margin-top:  500px;
-    background:linear-gradient(black,rgb(56, 54, 54));
-    padding: 5px;
-    color: white;
-}
-.container>.section1>h1{
-    margin: 10px;
-}
-.title-card{
-    background: rgb(0, 0, 0);
-    padding: 5px;
-    width: 100%;
-}
-
-.title-card>img{
-    width: 300px;
-    height: 250px;
-}
-
 #info{
-    text-align: center;   
-    margin-top: 75px;
-    background: linear-gradient(rgba(56, 56, 56, 0.973),rgba(3, 11, 54, 0.377));
+    margin-top: 350px;
+    width: 100%; 
+    border: 1px solid rgba(102, 95, 95, 0.171);
+    height: 400px;
 }
-#info>.container>.row>h1{
-    padding: 10px 0px;
-    margin: 20px;
-    background: rgb(22, 22, 22);
-    color: #fff;
-}
-#info>p{
-    padding: 5px;
-}
-#info>.container>.row>.text{
-    font-size: 16px;
+.titulo-img{
+    border-bottom: 2px solid black ;
+    position: relative;
+    top: 5px;
     font-family: monospace;
+    height: 50px;
+    display: flex;
+    place-items: center;
+    padding: 50px;
+    margin: 100px;
+}
+.galery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.galery>img{
+    width: 320px;
     height: 300px;
 }
 
-.gap{
-    background: black;
-    height: 100px;
+
+form{
+    background: linear-gradient(rgb(61, 58, 58), rgb(63, 61, 61));
+    padding: 30px;
+    justify-content: center;
 }
-.gap>h1{
-    top: 20px;
-}
+
 
 footer{
-    height: 450px;
-    background: linear-gradient(black,rgb(61, 58, 58));
-    padding: 5px;
-}
-
-.footer{
-    margin-top: 50px;
-    width: 300px;
-    height: 420x;
-    background: rgba(207, 205, 205, 0.041);
+    background: linear-gradient(rgb(12, 9, 9), rgb(48, 47, 47));
     color: #fff;
+    margin-top: 150px;
 }
